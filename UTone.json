@@ -1,6 +1,6 @@
 {
     "DesktopAudioDevice1": {
-        "prev_ver": 520093697,
+        "prev_ver": 520093699,
         "name": "デスクトップ音声",
         "uuid": "1ea756c6-d3f1-41f3-8d4b-85e3f689e2cd",
         "id": "pulse_output_capture",
@@ -21,9 +21,9 @@
         "push-to-talk-delay": 0,
         "hotkeys": {
             "libobs.mute": [],
-            "libobs.unmute": [],
             "libobs.push-to-mute": [],
-            "libobs.push-to-talk": []
+            "libobs.push-to-talk": [],
+            "libobs.unmute": []
         },
         "deinterlace_mode": 0,
         "deinterlace_field_order": 0,
@@ -31,7 +31,7 @@
         "private_settings": {}
     },
     "AuxAudioDevice1": {
-        "prev_ver": 520093697,
+        "prev_ver": 520093699,
         "name": "マイク",
         "uuid": "94db7fe3-fa46-4f10-81d6-2c88753566b8",
         "id": "pulse_input_capture",
@@ -52,9 +52,9 @@
         "push-to-talk-delay": 0,
         "hotkeys": {
             "libobs.mute": [],
-            "libobs.unmute": [],
             "libobs.push-to-mute": [],
-            "libobs.push-to-talk": []
+            "libobs.push-to-talk": [],
+            "libobs.unmute": []
         },
         "deinterlace_mode": 0,
         "deinterlace_field_order": 0,
@@ -86,11 +86,11 @@
             "name": "VJ"
         }
     ],
-    "name": "無題",
+    "name": "UTone",
     "groups": [],
     "quick_transitions": [
         {
-            "name": "カット",
+            "name": "フェード",
             "duration": 300,
             "hotkeys": [],
             "id": 1,
@@ -104,23 +104,41 @@
             "fade_to_black": false
         },
         {
-            "name": "フェード",
-            "duration": 450,
+            "name": "ttut3",
+            "duration": 300,
             "hotkeys": [],
-            "id": 3,
-            "fade_to_black": true
+            "id": 4,
+            "fade_to_black": false
         }
     ],
-    "transitions": [],
-    "saved_projectors": [
+    "transitions": [
         {
-            "monitor": -1,
-            "type": 4,
-            "geometry": "AdnQywADAAD////9////4gAABzoAAAP5AAAAAAAAAAAAAAHfAAABDQAAAAACAAAAB4AAAAAAAAAAAAAABzcAAAP2",
-            "alwaysOnTopOverridden": false
+            "name": "ttut1",
+            "id": "obs_stinger_transition",
+            "settings": {
+                "path": "D:/Hatchan/Documents/obs-collection/technotut-transition.webm",
+                "transition_point": 2000
+            }
+        },
+        {
+            "name": "ttut2",
+            "id": "obs_stinger_transition",
+            "settings": {
+                "path": "D:/Hatchan/Documents/obs-collection/animation_logo_3.gif",
+                "transition_point": 1000
+            }
+        },
+        {
+            "name": "ttut3",
+            "id": "obs_stinger_transition",
+            "settings": {
+                "path": "D:/Hatchan/Documents/obs-collection/TechnoTUT_logo.gif",
+                "transition_point": 1000
+            }
         }
     ],
-    "current_transition": "フェード",
+    "saved_projectors": [],
+    "current_transition": "ttut1",
     "transition_duration": 100,
     "preview_locked": false,
     "scaling_enabled": false,
@@ -131,33 +149,185 @@
         "type2": 3
     },
     "modules": {
-        "scripts-tool": [],
-        "output-timer": {
-            "streamTimerHours": 0,
-            "streamTimerMinutes": 0,
-            "streamTimerSeconds": 30,
-            "recordTimerHours": 0,
-            "recordTimerMinutes": 0,
-            "recordTimerSeconds": 30,
-            "autoStartStreamTimer": false,
-            "autoStartRecordTimer": false,
-            "pauseRecordTimer": true
-        },
         "advanced-scene-switcher": {
             "sceneGroups": [],
-            "macros": [],
+            "macros": [
+                {
+                    "name": "utone",
+                    "group": false,
+                    "pauseSaveBehavior": 0,
+                    "pause": false,
+                    "parallel": false,
+                    "onChange": true,
+                    "skipExecOnStart": false,
+                    "stopActionsIfNotDone": false,
+                    "useShortCircuitEvaluation": false,
+                    "useCustomConditionCheckInterval": false,
+                    "customConditionCheckInterval": {
+                        "value": {
+                            "value": 0.29999999999999999,
+                            "type": 0
+                        },
+                        "unit": 0,
+                        "version": 1
+                    },
+                    "dockSettings": {
+                        "register": false,
+                        "hasRunButton": true,
+                        "hasPauseButton": true,
+                        "hasStatusLabel": false,
+                        "highlightIfConditionsTrue": false,
+                        "runButtonText": "実行",
+                        "pauseButtonText": "一時停止",
+                        "unpauseButtonText": "一時停止解除",
+                        "conditionsTrueStatusText": "結果はturuでした。",
+                        "conditionsFalseStatusText": "結果はfalseでした。",
+                        "dockId": "advss-macro-dock-49064ea3-89b0-4cc8-9bad-55bd58868d22",
+                        "version": 1
+                    },
+                    "macroActionConditionSplitterPosition": [
+                        {
+                            "pos": 353
+                        },
+                        {
+                            "pos": 352
+                        }
+                    ],
+                    "macroElseActionSplitterPosition": [
+                        {
+                            "pos": 320
+                        },
+                        {
+                            "pos": 0
+                        }
+                    ],
+                    "registerHotkeys": false,
+                    "pauseHotkey": [],
+                    "unpauseHotkey": [],
+                    "togglePauseHotkey": [],
+                    "conditions": [],
+                    "actions": [],
+                    "elseActions": [],
+                    "inputVariables": []
+                }
+            ],
             "macroSettings": {
                 "highlightExecuted": false,
                 "highlightConditions": false,
                 "highlightActions": false,
-                "newMacroRegisterHotkey": false
+                "newMacroRegisterHotkey": false,
+                "newMacroUseShortCircuitEvaluation": false,
+                "saveSettingsOnMacroChange": true
             },
             "variables": [],
             "switches": [],
             "ignoreWindows": [],
             "screenRegion": [],
             "pauseEntries": [],
-            "sceneRoundTrip": [],
+            "sceneRoundTrip": [
+                {
+                    "targetType": 0,
+                    "target": "2cam",
+                    "transition": "ttut1",
+                    "startTargetType": 0,
+                    "startScene": "temoto",
+                    "delay": {
+                        "value": {
+                            "value": 1.0,
+                            "type": 0
+                        },
+                        "unit": 1,
+                        "version": 1
+                    },
+                    "interruptible": false,
+                    "extendScenes": []
+                },
+                {
+                    "targetType": 0,
+                    "target": "gopro",
+                    "transition": "ttut2",
+                    "startTargetType": 0,
+                    "startScene": "2cam",
+                    "delay": {
+                        "value": {
+                            "value": 30.0,
+                            "type": 0
+                        },
+                        "unit": 0,
+                        "version": 1
+                    },
+                    "interruptible": false,
+                    "extendScenes": []
+                },
+                {
+                    "targetType": 0,
+                    "target": "pixel",
+                    "transition": "ttut1",
+                    "startTargetType": 0,
+                    "startScene": "gopro",
+                    "delay": {
+                        "value": {
+                            "value": 30.0,
+                            "type": 0
+                        },
+                        "unit": 0,
+                        "version": 1
+                    },
+                    "interruptible": false,
+                    "extendScenes": []
+                },
+                {
+                    "targetType": 0,
+                    "target": "iPhone",
+                    "transition": "ttut1",
+                    "startTargetType": 0,
+                    "startScene": "pixel",
+                    "delay": {
+                        "value": {
+                            "value": 30.0,
+                            "type": 0
+                        },
+                        "unit": 0,
+                        "version": 1
+                    },
+                    "interruptible": false,
+                    "extendScenes": []
+                },
+                {
+                    "targetType": 0,
+                    "target": "dj-explain",
+                    "transition": "ttut1",
+                    "startTargetType": 0,
+                    "startScene": "iPhone",
+                    "delay": {
+                        "value": {
+                            "value": 1.0,
+                            "type": 0
+                        },
+                        "unit": 1,
+                        "version": 1
+                    },
+                    "interruptible": false,
+                    "extendScenes": []
+                },
+                {
+                    "targetType": 0,
+                    "target": "temoto",
+                    "transition": "ttut3",
+                    "startTargetType": 0,
+                    "startScene": "dj-explain",
+                    "delay": {
+                        "value": {
+                            "value": 30.0,
+                            "type": 0
+                        },
+                        "unit": 0,
+                        "version": 1
+                    },
+                    "interruptible": false,
+                    "extendScenes": []
+                }
+            ],
             "sceneTransitions": [],
             "defaultTransitions": [],
             "defTransitionDelay": 0,
@@ -190,16 +360,6 @@
                 "version": 1
             },
             "videoSwitches": [],
-            "ServerEnabled": false,
-            "ServerPort": 55555,
-            "LockToIPv4": false,
-            "ClientEnabled": false,
-            "Address": "",
-            "ClientPort": 55555,
-            "SendSceneChange": true,
-            "SendSceneChangeAll": true,
-            "SendPreview": true,
-            "triggers": [],
             "interval": 300,
             "non_matching_scene": "",
             "switch_if_not_matching": 0,
@@ -224,6 +384,7 @@
             "startup_behavior": 0,
             "autoStartEvent": 0,
             "logLevel": 0,
+            "logLevelVersion": 1,
             "showSystemTrayNotifications": false,
             "disableHints": false,
             "disableFilterComboboxFilter": false,
@@ -258,31 +419,31 @@
                     "macroTab": 1
                 },
                 {
-                    "windowTitleTab": 2
+                    "windowTitleTab": 10
                 },
                 {
-                    "executableTab": 3
+                    "executableTab": 2
                 },
                 {
-                    "screenRegionTab": 4
+                    "screenRegionTab": 3
                 },
                 {
-                    "mediaTab": 5
+                    "mediaTab": 4
                 },
                 {
-                    "fileTab": 6
+                    "fileTab": 5
                 },
                 {
-                    "randomTab": 7
+                    "randomTab": 6
                 },
                 {
-                    "timeTab": 8
+                    "timeTab": 7
                 },
                 {
-                    "idleTab": 9
+                    "idleTab": 8
                 },
                 {
-                    "sceneSequenceTab": 10
+                    "sceneSequenceTab": 9
                 },
                 {
                     "audioTab": 11
@@ -291,46 +452,69 @@
                     "videoTab": 12
                 },
                 {
-                    "networkTab": 13
+                    "sceneGroupTab": 13
                 },
                 {
-                    "sceneGroupTab": 14
+                    "transitionsTab": 14
                 },
                 {
-                    "transitionsTab": 15
+                    "pauseTab": 15
                 },
                 {
-                    "pauseTab": 16
+                    "websocketConnectionTab": 16
                 },
                 {
-                    "sceneTriggerTab": 17
+                    "twitchConnectionTab": 17
                 },
                 {
-                    "websocketConnectionTab": 18
+                    "variableTab": 18
                 },
                 {
-                    "variableTab": 19
-                },
-                {
-                    "actionQueueTab": 20
+                    "actionQueueTab": 19
                 }
             ],
-            "saveWindowGeo": false,
-            "windowPosX": 418,
-            "windowPosY": 147,
-            "windowWidth": 1000,
-            "windowHeight": 600,
+            "saveWindowGeo": true,
+            "windowPosX": 201,
+            "windowPosY": 35,
+            "windowWidth": 1008,
+            "windowHeight": 906,
             "macroListMacroEditSplitterPosition": [
                 {
-                    "pos": 148
+                    "pos": 144
                 },
                 {
-                    "pos": 826
+                    "pos": 491
                 }
             ],
-            "version": "b561a20ddeca3e3e922ec1bf427ff811c2bf18f1",
+            "version": "70bbc7cdaccd40fedc346809e2ae5eb0df3a09ec",
             "websocketConnections": [],
+            "twitchConnections": [],
             "actionQueues": []
+        },
+        "output-timer": {
+            "streamTimerHours": 0,
+            "streamTimerMinutes": 0,
+            "streamTimerSeconds": 30,
+            "recordTimerHours": 0,
+            "recordTimerMinutes": 0,
+            "recordTimerSeconds": 30,
+            "autoStartStreamTimer": false,
+            "autoStartRecordTimer": false,
+            "pauseRecordTimer": true
+        },
+        "scripts-tool": [],
+        "auto-scene-switcher": {
+            "interval": 300,
+            "non_matching_scene": "",
+            "switch_if_not_matching": false,
+            "active": false,
+            "switches": []
+        },
+        "captions": {
+            "source": "",
+            "enabled": false,
+            "lang_id": 1041,
+            "provider": "mssapi"
         }
     },
     "resolution": {
@@ -340,7 +524,7 @@
     "version": 2,
     "sources": [
         {
-            "prev_ver": 520093697,
+            "prev_ver": 520093699,
             "name": "画像",
             "uuid": "9ba5ca6f-47d8-4f0b-8b73-2c7f8f6c5abc",
             "id": "image_source",
@@ -366,14 +550,14 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 520093697,
+            "prev_ver": 520093699,
             "name": "2cam",
             "uuid": "eb65f2f7-7b78-491c-9985-66332973eacf",
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
-                "id_counter": 2,
                 "custom_size": false,
+                "id_counter": 3,
                 "items": [
                     {
                         "name": "cam2",
@@ -396,7 +580,7 @@
                         "id": 1,
                         "group_item_backup": false,
                         "pos": {
-                            "x": 0.0,
+                            "x": 63.0,
                             "y": 0.0
                         },
                         "pos_rel": {
@@ -404,8 +588,8 @@
                             "y": -1.0
                         },
                         "scale": {
-                            "x": 1.5,
-                            "y": 1.5
+                            "x": 1.4013888835906982,
+                            "y": 1.4013888835906982
                         },
                         "scale_rel": {
                             "x": 1.5,
@@ -451,16 +635,16 @@
                         "id": 2,
                         "group_item_backup": false,
                         "pos": {
-                            "x": 0.0,
-                            "y": 848.0
+                            "x": 63.0,
+                            "y": 792.5
                         },
                         "pos_rel": {
                             "x": -1.7777777910232544,
                             "y": 0.57037031650543213
                         },
                         "scale": {
-                            "x": 0.2578125,
-                            "y": 0.25777778029441833
+                            "x": 0.24086371064186096,
+                            "y": 0.24083127081394196
                         },
                         "scale_rel": {
                             "x": 0.2578125,
@@ -511,7 +695,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 520093697,
+            "prev_ver": 520093699,
             "name": "cam2",
             "uuid": "820cb064-eea2-4aca-b2b2-03f3f234b018",
             "id": "ffmpeg_source",
@@ -550,7 +734,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 520093697,
+            "prev_ver": 520093699,
             "name": "camera1",
             "uuid": "8b2d6cd9-30a8-4a39-b348-52ca6e6e4e6f",
             "id": "ffmpeg_source",
@@ -588,39 +772,70 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 520093697,
-            "name": "DJ Hatchan",
-            "uuid": "bc509a20-4249-44b8-9deb-b4f1d2758228",
-            "id": "text_ft2_source",
-            "versioned_id": "text_ft2_source_v2",
-            "settings": {},
-            "mixers": 0,
-            "sync": 0,
-            "flags": 0,
-            "volume": 1.0,
-            "balance": 0.5,
-            "enabled": true,
-            "muted": false,
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "hotkeys": {},
-            "deinterlace_mode": 0,
-            "deinterlace_field_order": 0,
-            "monitoring_type": 0,
-            "private_settings": {}
-        },
-        {
-            "prev_ver": 520093697,
+            "prev_ver": 520093699,
             "name": "dj-explain",
             "uuid": "3ee7fd4f-477d-409b-9e74-1e7a49fc4103",
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
-                "id_counter": 1,
                 "custom_size": false,
+                "id_counter": 3,
                 "items": [
+                    {
+                        "name": "camera1",
+                        "source_uuid": "8b2d6cd9-30a8-4a39-b348-52ca6e6e4e6f",
+                        "visible": true,
+                        "locked": false,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1009.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 3,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 63.0,
+                            "y": 0.0
+                        },
+                        "pos_rel": {
+                            "x": -1.7779979705810547,
+                            "y": -1.0
+                        },
+                        "scale": {
+                            "x": 1.4013888835906982,
+                            "y": 1.4013888835906982
+                        },
+                        "scale_rel": {
+                            "x": 1.4013888835906982,
+                            "y": 1.4013888835906982
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    },
                     {
                         "name": "画像",
                         "source_uuid": "9ba5ca6f-47d8-4f0b-8b73-2c7f8f6c5abc",
@@ -642,7 +857,7 @@
                         "id": 1,
                         "group_item_backup": false,
                         "pos": {
-                            "x": 195.0,
+                            "x": 245.5,
                             "y": 0.0
                         },
                         "pos_rel": {
@@ -650,8 +865,8 @@
                             "y": -1.0
                         },
                         "scale": {
-                            "x": 0.43614596128463745,
-                            "y": 0.43611446022987366
+                            "x": 0.40747338533401489,
+                            "y": 0.40744397044181824
                         },
                         "scale_rel": {
                             "x": 0.43614596128463745,
@@ -692,7 +907,9 @@
             "hotkeys": {
                 "OBSBasic.SelectScene": [],
                 "libobs.show_scene_item.1": [],
-                "libobs.hide_scene_item.1": []
+                "libobs.hide_scene_item.1": [],
+                "libobs.show_scene_item.3": [],
+                "libobs.hide_scene_item.3": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
@@ -700,14 +917,14 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 520093697,
+            "prev_ver": 520093699,
             "name": "gopro",
             "uuid": "a8821fb0-4b87-4845-998b-bcfb2f6b8149",
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
-                "id_counter": 1,
                 "custom_size": false,
+                "id_counter": 2,
                 "items": [
                     {
                         "name": "NDI® Source 3",
@@ -730,16 +947,16 @@
                         "id": 1,
                         "group_item_backup": false,
                         "pos": {
-                            "x": -308.0,
-                            "y": -235.0
+                            "x": -224.5,
+                            "y": -219.5
                         },
                         "pos_rel": {
                             "x": -2.3481481075286865,
                             "y": -1.4351851940155029
                         },
                         "scale": {
-                            "x": 2.0765624046325684,
-                            "y": 2.0763888359069824
+                            "x": 1.9400476217269897,
+                            "y": 1.9398854970932007
                         },
                         "scale_rel": {
                             "x": 2.0765624046325684,
@@ -788,14 +1005,14 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 520093697,
+            "prev_ver": 520093699,
             "name": "iPhone",
             "uuid": "dd7774e2-09da-4821-8f3c-f4145e741482",
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
-                "id_counter": 1,
                 "custom_size": false,
+                "id_counter": 3,
                 "items": [
                     {
                         "name": "NDI® Source 4",
@@ -818,16 +1035,16 @@
                         "id": 1,
                         "group_item_backup": false,
                         "pos": {
-                            "x": 2413.0,
-                            "y": 1466.0
+                            "x": 2317.5,
+                            "y": 1369.5
                         },
                         "pos_rel": {
                             "x": 2.6907408237457275,
                             "y": 1.7148149013519287
                         },
                         "scale": {
-                            "x": 1.4604166746139526,
-                            "y": 1.460185170173645
+                            "x": 1.3644077777862549,
+                            "y": 1.3641915321350098
                         },
                         "scale_rel": {
                             "x": 1.4604166746139526,
@@ -876,7 +1093,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 520093697,
+            "prev_ver": 520093699,
             "name": "Logo",
             "uuid": "f87b155b-f88f-4f41-89f6-c6588bc45443",
             "id": "browser_source",
@@ -911,7 +1128,7 @@
             "private_settings": {},
             "filters": [
                 {
-                    "prev_ver": 520093697,
+                    "prev_ver": 520093699,
                     "name": "Browser Auto-refresh",
                     "uuid": "5207dcc5-6530-4b03-8b80-48e708ba64bd",
                     "id": "xObsBrowserAutoRefresh Browser Filter",
@@ -939,16 +1156,16 @@
             ]
         },
         {
-            "prev_ver": 520093697,
+            "prev_ver": 520093699,
             "name": "NDI® Source",
             "uuid": "137aace1-0b94-4a5e-a19d-9ac5d3dab527",
             "id": "ndi_source",
             "versioned_id": "ndi_source",
             "settings": {
                 "ndi_fix_alpha_blending": false,
-                "ndi_source_name": "X270 (VJ)",
-                "ndi_recv_hw_accel": true,
                 "ndi_framesync": true,
+                "ndi_recv_hw_accel": true,
+                "ndi_source_name": "X270 (VJ)",
                 "latency": 2
             },
             "mixers": 255,
@@ -974,7 +1191,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 520093697,
+            "prev_ver": 520093699,
             "name": "NDI® Source 2",
             "uuid": "54618113-44dd-4680-9b58-5f7e18dfc9df",
             "id": "ndi_source",
@@ -1006,16 +1223,16 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 520093697,
+            "prev_ver": 520093699,
             "name": "NDI® Source 3",
             "uuid": "42032399-2064-4abf-852e-f198fdf754c7",
             "id": "ndi_source",
             "versioned_id": "ndi_source",
             "settings": {
                 "ndi_fix_alpha_blending": false,
-                "ndi_source_name": "LETSNOTE (OBS LN)",
                 "ndi_framesync": true,
                 "ndi_recv_hw_accel": true,
+                "ndi_source_name": "LETSNOTE (OBS LN)",
                 "latency": 2
             },
             "mixers": 255,
@@ -1041,7 +1258,7 @@
             "private_settings": {},
             "filters": [
                 {
-                    "prev_ver": 520093697,
+                    "prev_ver": 520093699,
                     "name": "DistroAV - Fix alpha blending",
                     "uuid": "41c16a61-ac18-4b7f-98b6-b80058004e3b",
                     "id": "premultiplied_alpha_filter",
@@ -1067,7 +1284,7 @@
             ]
         },
         {
-            "prev_ver": 520093697,
+            "prev_ver": 520093699,
             "name": "NDI® Source 4",
             "uuid": "e9913e5f-02a9-40d9-a65f-00aadd01a0e7",
             "id": "ndi_source",
@@ -1099,14 +1316,14 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 520093697,
+            "prev_ver": 520093699,
             "name": "pixel",
             "uuid": "1ca73d1d-897d-409d-bfff-4dd8fa4f1a33",
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
-                "id_counter": 1,
                 "custom_size": false,
+                "id_counter": 2,
                 "items": [
                     {
                         "name": "NDI® Source 2",
@@ -1129,7 +1346,7 @@
                         "id": 1,
                         "group_item_backup": false,
                         "pos": {
-                            "x": 0.0,
+                            "x": 63.0,
                             "y": 0.0
                         },
                         "pos_rel": {
@@ -1137,8 +1354,8 @@
                             "y": -1.0
                         },
                         "scale": {
-                            "x": 1.0,
-                            "y": 1.0
+                            "x": 0.93425923585891724,
+                            "y": 0.93425923585891724
                         },
                         "scale_rel": {
                             "x": 1.0,
@@ -1187,14 +1404,14 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 520093697,
+            "prev_ver": 520093699,
             "name": "temoto",
             "uuid": "50593cb2-b16e-4098-9aea-dd7e780f22ba",
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
-                "id_counter": 11,
                 "custom_size": false,
+                "id_counter": 12,
                 "items": [
                     {
                         "name": "camera1",
@@ -1217,7 +1434,7 @@
                         "id": 5,
                         "group_item_backup": false,
                         "pos": {
-                            "x": 0.0,
+                            "x": 63.0,
                             "y": 0.0
                         },
                         "pos_rel": {
@@ -1225,67 +1442,12 @@
                             "y": -1.0
                         },
                         "scale": {
-                            "x": 1.5,
-                            "y": 1.5
+                            "x": 1.4013888835906982,
+                            "y": 1.4013888835906982
                         },
                         "scale_rel": {
                             "x": 1.5,
                             "y": 1.5
-                        },
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "bounds_rel": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "scale_filter": "disable",
-                        "blend_method": "default",
-                        "blend_type": "normal",
-                        "show_transition": {
-                            "duration": 0
-                        },
-                        "hide_transition": {
-                            "duration": 0
-                        },
-                        "private_settings": {}
-                    },
-                    {
-                        "name": "DJ Hatchan",
-                        "source_uuid": "bc509a20-4249-44b8-9deb-b4f1d2758228",
-                        "visible": true,
-                        "locked": false,
-                        "rot": 0.0,
-                        "scale_ref": {
-                            "x": 1920.0,
-                            "y": 1080.0
-                        },
-                        "align": 5,
-                        "bounds_type": 0,
-                        "bounds_align": 0,
-                        "bounds_crop": false,
-                        "crop_left": 0,
-                        "crop_top": 0,
-                        "crop_right": 0,
-                        "crop_bottom": 0,
-                        "id": 6,
-                        "group_item_backup": false,
-                        "pos": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "pos_rel": {
-                            "x": -1.7777777910232544,
-                            "y": -1.0
-                        },
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "scale_rel": {
-                            "x": 1.0,
-                            "y": 1.0
                         },
                         "bounds": {
                             "x": 0.0,
@@ -1327,16 +1489,16 @@
                         "id": 1,
                         "group_item_backup": false,
                         "pos": {
-                            "x": 0.0,
-                            "y": 929.0
+                            "x": 63.0,
+                            "y": 868.0
                         },
                         "pos_rel": {
                             "x": -1.7777777910232544,
                             "y": 0.72032856941223145
                         },
                         "scale": {
-                            "x": 0.30312499403953552,
-                            "y": 0.30325815081596375
+                            "x": 0.2831973135471344,
+                            "y": 0.28332173824310303
                         },
                         "scale_rel": {
                             "x": 0.30312499403953552,
@@ -1378,8 +1540,6 @@
                 "OBSBasic.SelectScene": [],
                 "libobs.show_scene_item.5": [],
                 "libobs.hide_scene_item.5": [],
-                "libobs.show_scene_item.6": [],
-                "libobs.hide_scene_item.6": [],
                 "libobs.show_scene_item.1": [],
                 "libobs.hide_scene_item.1": []
             },
@@ -1389,14 +1549,14 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 520093697,
+            "prev_ver": 520093699,
             "name": "VJ",
             "uuid": "72736fd8-527e-4461-997a-01a6edae71bf",
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
-                "id_counter": 1,
                 "custom_size": false,
+                "id_counter": 1,
                 "items": [
                     {
                         "name": "NDI® Source",
@@ -1419,7 +1579,7 @@
                         "id": 1,
                         "group_item_backup": false,
                         "pos": {
-                            "x": 0.0,
+                            "x": 63.0,
                             "y": 0.0
                         },
                         "pos_rel": {
@@ -1427,8 +1587,8 @@
                             "y": -1.0
                         },
                         "scale": {
-                            "x": 1.0,
-                            "y": 1.0
+                            "x": 0.93425923585891724,
+                            "y": 0.93425923585891724
                         },
                         "scale_rel": {
                             "x": 1.0,
