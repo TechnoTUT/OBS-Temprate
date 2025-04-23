@@ -1,13 +1,17 @@
 #!/bin/bash
-sudo apt-get install ffmpeg
+DISTROAV_VERSION=6.0.0
+SCENE_SWITCHER_VERSION=1.29.3
+
+sudo add-apt-repository ppa:ubuntuhandbook1/ffmpeg7
+sudo apt-get update -y
+sudo apt-get install -y ffmpeg
 sudo add-apt-repository ppa:obsproject/obs-studio
-sudo apt update
-sudo apt-get update && sudo apt-get install obs-studio
+sudo apt-get update -y && sudo apt-get install -y obs-studio
 sudo apt-get install -y wget tar
 mkdir -p tmp && cd tmp
-wget https://github.com/DistroAV/DistroAV/releases/download/6.0.0/distroav-6.0.0-x86_64-linux-gnu.deb
-sudo dpkg -i distroav-6.0.0-x86_64-linux-gnu.deb
-rm -rf distroav-6.0.0-x86_64-linux-gnu.deb
+wget https://github.com/DistroAV/DistroAV/releases/download/${DISTROAV_VERSION}/distroav-${DISTROAV_VERSION}-x86_64-linux-gnu.deb
+sudo dpkg -i distroav-${DISTROAV_VERSION}-x86_64-linux-gnu.deb
+rm -rf distroav-${DISTROAV_VERSION}-x86_64-linux-gnu.deb
 wget https://downloads.ndi.tv/SDK/NDI_SDK_Linux/Install_NDI_SDK_v6_Linux.tar.gz
 tar xvf Install_NDI_SDK_v6_Linux.tar.gz 
 rm -rf Install_NDI_SDK_v6_Linux.tar.gz 
@@ -54,13 +58,12 @@ cat <<EOF > ~/.ndi/ndi-config.v1.json
 }
 EOF
 sudo apt install avahi-daemon
-sudo systemctl enable avahi-daemon
-sudo systemctl start avahi-daemon
-wget https://github.com/WarmUpTill/SceneSwitcher/releases/download/1.27.2/advanced-scene-switcher-1.27.2-x86_64-linux-gnu.tar.xz
-tar Jxvf advanced-scene-switcher-1.27.2-x86_64-linux-gnu.tar.xz
+sudo systemctl enable --now avahi-daemon
+wget https://github.com/WarmUpTill/SceneSwitcher/releases/download/${SCENE_SWITCHER_VERSION}/advanced-scene-switcher-${SCENE_SWITCHER_VERSION}-x86_64-linux-gnu.tar.xz
+tar Jxvf advanced-scene-switcher-${SCENE_SWITCHER_VERSION}-x86_64-linux-gnu.tar.xz
 sudo cp -r lib/x86_64-linux-gnu/obs-plugins/* /lib/x86_64-linux-gnu/obs-plugins/
 sudo cp -r share/obs/obs-plugins/advanced-scene-switcher /usr/share/obs/obs-plugins/
 sudo rm /lib/x86_64-linux-gnu/obs-plugins/advanced-scene-switcher-plugins/advanced-scene-switcher-opencv.so
 sudo rm /lib/x86_64-linux-gnu/obs-plugins/advanced-scene-switcher-plugins/advanced-scene-switcher-twitch.so
-sudo apt-get update && sudo apt-get install libxss-dev libxtst-dev
+sudo apt-get update -y && sudo apt-get install -y libxss-dev libxtst-dev
 cd .. && rm -rf tmp
