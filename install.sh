@@ -1,6 +1,6 @@
 #!/bin/bash
-DISTROAV_VERSION=6.0.0
-SCENE_SWITCHER_VERSION=1.29.3
+DISTROAV_VERSION=6.1.1
+SCENE_SWITCHER_VERSION=1.31.1
 
 sudo add-apt-repository ppa:ubuntuhandbook1/ffmpeg7
 sudo apt-get update -y
