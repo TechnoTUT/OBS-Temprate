@@ -67,3 +67,12 @@ sudo rm /lib/x86_64-linux-gnu/obs-plugins/advanced-scene-switcher-plugins/advanc
 sudo rm /lib/x86_64-linux-gnu/obs-plugins/advanced-scene-switcher-plugins/advanced-scene-switcher-twitch.so
 sudo apt-get update -y && sudo apt-get install -y libxss-dev libxtst-dev
 cd .. && rm -rf tmp
+sudo ufw allow 5353/udp
+sudo ufw allow 5959:5969/tcp
+sudo ufw allow 5959:5969/udp
+sudo ufw allow 6960:6970/tcp
+sudo ufw allow 6960:6970/udp
+sudo ufw allow 7960:7970/tcp
+sudo ufw allow 7960:7970/udp
+sudo ufw allow 5960/tcp
+sudo ufw status
