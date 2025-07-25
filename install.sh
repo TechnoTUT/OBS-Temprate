@@ -75,4 +75,5 @@ sudo ufw allow 6960:6970/udp
 sudo ufw allow 7960:7970/tcp
 sudo ufw allow 7960:7970/udp
 sudo ufw allow 5960/tcp
+sudo ufw --force enable
 sudo ufw status
