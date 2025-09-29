@@ -36,7 +36,7 @@ cat <<EOF > ~/.ndi/ndi-config.v1.json
     },
     "networks" : {
       "ips" : "",
-      "discovery" : ""
+      "discovery" : "10.11.230.254"
     },
     "groups" : {
       "recv" : "public",
@@ -44,7 +44,7 @@ cat <<EOF > ~/.ndi/ndi-config.v1.json
     },
     "multicast" : {
       "send" : {
-        "enable" : false,
+        "enable" : true,
         "netprefix" : "239.255.0.0",
         "netmask" : "255.255.0.0"
       }
